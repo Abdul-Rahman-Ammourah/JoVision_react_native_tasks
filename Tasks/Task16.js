@@ -4,7 +4,7 @@ import {View,Text,Button,StyleSheet,Alert} from 'react-native';
 const Task16 = () => {
     const [IsHidden,SetIsHidden] = useState(true);
 
-    const HandelPress = () => {
+    const HandlePress = () => {
         SetIsHidden(!IsHidden);
     }
     
@@ -12,7 +12,7 @@ const Task16 = () => {
 
         <View style={style.container}>
             {IsHidden && <Text style={style.text}>Abdul-Rahman Ammourah</Text>}
-            <Button title="Show" onPress={HandelPress} ></Button>
+            <Button title="Show" onPress={HandlePress} ></Button>
             
         </View>
         

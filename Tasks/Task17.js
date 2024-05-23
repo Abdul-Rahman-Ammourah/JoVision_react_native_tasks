@@ -12,7 +12,7 @@ const Task17 = () => {
 
         <View style={style.container}>
             {IsHidden && <Text style={style.text}>Abdul-Rahman Ammourah</Text>}
-            <Button title="Show" onPress={HandelPress} ></Button>
+            <Button title={IsHidden?"Hide":"Show"} onPress={HandelPress} ></Button>
             
         </View>
         
@@ -25,9 +25,9 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     text:{
-        margin: 20
+        margin: 10
 
     }
 });
 
-export default Task16;
+export default Task17;

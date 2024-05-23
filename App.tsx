@@ -7,11 +7,19 @@ export default class App extends Component {
   render(){
     return(
 
-      <View>
-        {/* <Task16></Task16> */}
+      <View style={styles.appcontainer}>
+        
         <Task17></Task17>
+        
       </View>
 
     )
   }
 }
+const styles = StyleSheet.create({
+  appcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+})
