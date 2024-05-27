@@ -1,11 +1,18 @@
 import React,{Component} from "react";
 import { View,Text,Button } from "react-native";
-
+import CustomFunction from "../CustomFuntion/CustomFunction1";
 export default class Task21 extends Component {
+    state = {
+        Isloading:false
+    }
+    UpdateIsLoading = () =>{
+        this.setState({Isloading:!this.state.Isloading})
+    }
     render(){
         return(
             <View>
-                <Button title="Show" onPress={null}></Button>
+                <Button title="Show" onPress={this.UpdateIsLoading}></Button>
+                {this.state.Isloading && <CustomFunction></CustomFunction>}
             </View>
 
 

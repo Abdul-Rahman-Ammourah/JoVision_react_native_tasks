@@ -17,7 +17,8 @@ export default class App extends Component {
         {/* <Task18></Task18> */}
         {/* <Task19></Task19> */}
         {/* <Task20></Task20> */}
-        <Task21></Task21>
+        {/* <Task21></Task21> */}
+        
       </View>
 
     )

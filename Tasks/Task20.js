@@ -7,8 +7,6 @@ export default class Task20 extends Component {
         Callclass:false,
         didmount:false
     }
-    updateState = () => {
-        this.setState({Callclass:true})}
     componentDidMount(){
         this.setState({didmount:true})
         console.log("Custom Class Loaded......")
@@ -17,6 +15,9 @@ export default class Task20 extends Component {
         console.log("Custom Class Unloaded.....")
     }
 
+    updateState = () => {
+        this.setState({Callclass:!this.state.Callclass})}
+    
     render(){
         return(
             <View>
