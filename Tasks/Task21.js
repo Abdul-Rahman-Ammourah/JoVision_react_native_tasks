@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { View,Text,Button } from "react-native";
-import CustomFunction from "../CustomFuntion/CustomFunction1";
+import CustomFunction1 from "../CustomFuntion/CustomFunction1";
 export default class Task21 extends Component {
     state = {
         Isloading:false
@@ -12,7 +12,7 @@ export default class Task21 extends Component {
         return(
             <View>
                 <Button title="Show" onPress={this.UpdateIsLoading}></Button>
-                {this.state.Isloading && <CustomFunction></CustomFunction>}
+                {this.state.Isloading && <CustomFunction1></CustomFunction1>}
             </View>
 
 
