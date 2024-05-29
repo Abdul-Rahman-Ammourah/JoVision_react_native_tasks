@@ -8,8 +8,7 @@ const Task18 = () => {
 
     useEffect(() => {
         const timer = setTimeout(() => {SetIsloading(false);}, 5000);
-    
-        return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+     
       }, []);
     return(
     <View>
