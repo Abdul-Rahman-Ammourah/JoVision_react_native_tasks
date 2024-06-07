@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
  
-export const styles = StyleSheet.create({
+export default styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -25,9 +25,14 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
     },
     Button:{
-        flex:1,
         justifyContent: 'center',
         alignItems: 'center',
+        width:100,
+        height: 55,
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 10,
+        borderBlockColor: 'blackShade',
     },
     OutterModal:{
         flex:1,
@@ -49,6 +54,7 @@ export const styles = StyleSheet.create({
         elevation: 5,
         width:300,
         height: 200,
+        alignItems: 'center',
     },
     ModalText:{
         marginBottom: 15,

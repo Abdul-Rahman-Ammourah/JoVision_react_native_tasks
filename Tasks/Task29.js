@@ -1,5 +1,7 @@
 import React,{Component} from "react";
-import { View,Text,Button, Image,Alert,StyleSheet, Pressable, FlatList,Modal, TextInput } from "react-native";
+import { View,Text,Button, Image,Alert, Pressable, FlatList,Modal, TextInput } from "react-native";
+import CButton from "../CustomFuntion/CustomButton";
+import styles from "./style.js";
 import cat1 from "../Resources/Cat1.jpeg";
 import cat2 from "../Resources/Cat2.jpeg";
 import cat3 from "../Resources/Cat3.jpeg";
@@ -17,7 +19,8 @@ export default class Task29 extends Component {
     state = {
         image:catlist[0],//setting the first image as the default
         imageindex:5,
-        modalVisible:true
+        modalVisible:false,
+        imageinput:null
     }
     //Creating refference
     flatRef = React.createRef()
@@ -39,14 +42,7 @@ export default class Task29 extends Component {
     
     //Take input from the user and scroll to that image via alert
     handleclick = () => {
-        Alert.alert("Cat pictures","Choose one of the ten cats",[
-            {
-                text:"Enter a number from 1 to 10",
-                onPress:() => {
-                    this.scrollTo(this.state.imageindex);
-                }
-            },
-        ])
+        this.setState({modalVisible:true})
     }
     //Scrolling to the image
     scrollTo = (index) => {
@@ -56,6 +52,12 @@ export default class Task29 extends Component {
     ModalInputHandeler = (num) => {
         if (num > 0 && num < 11) {
             this.scrollTo(num - 1);
+        }
+        else if (num == null) {
+            Alert.alert("Error", "Please enter a number")
+        }
+        else {
+            Alert.alert("Invalid Input", "Enter a number between 1 and 10")
         }
     }
     render(){
@@ -69,18 +71,13 @@ export default class Task29 extends Component {
                     horizontal
                     contentContainerStyle={styles.contentList}
                     style={styles.list}
-                    
-                    
-                    
                 />
-                <Button title="Scroll to Image" onPress={this.handleclick} ></Button>
+                <CButton title="Scroll To" onPress={this.handleclick} style={styles.Button} ></CButton>
                 <Modal
                     animationType="slide"
                     transparent={true}
                     visible={this.state.modalVisible}
-                    onRequestClose={() => {
-                        this.setState({modalVisible: false });
-                    }}
+                    
                 >
                     <View style={styles.OutterModal}>
 
@@ -88,7 +85,8 @@ export default class Task29 extends Component {
 
                             <Text style={styles.ModalText}>Choose a number from 1 to 10</Text>
 
-                            <TextInput placeholder="    ?" style={styles.ModalInput} onChangeText={this.ModalInputHandeler}  ></TextInput>
+                            <TextInput placeholder="    ?" style={styles.ModalInput} onChangeText={(num) => this.setState({imageinput:num})} ></TextInput>
+                            <CButton style={styles.Button} title="Submit" onPress={() => {this.ModalInputHandeler(this.state.imageinput);this.setState({modalVisible:false})}} ></CButton>
                         </View>
                     </View>
                 </Modal>
