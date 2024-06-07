@@ -22,11 +22,13 @@ export default class Task28 extends Component {
         
         Alert.alert("Image Selected",`You have selected image: ${index+1}`);
     }
-    renderItem = ({item ,index}) => {
+    renderItem = (item ,index) => {
         return(
+            <View style={styles.containerimage}>
             <Pressable onPress={() => this.handlepress(index)}>
             <Image source={item} style={styles.image} ></Image>
             </Pressable>
+            </View>
         )
     }
     render(){
@@ -35,8 +37,9 @@ export default class Task28 extends Component {
             <FlatList
                     data={catlist}
                     renderItem={this.renderItem}
-                    keyExtractor={(item,index) => index.toString()}
+                    keyExtractor={(index) => index.toString()}
                     horizontal
+                    contentContainerStyle={styles.contentList}
                     style={styles.list}
                 />
 
@@ -51,13 +54,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    containerimage: {
+        padding: 1
+    },
     image: {
         width: 200,
         height: 200,
         marginBottom: 20,
+
     },
     list: {
         flex:1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+
+    },
+    contentList: {
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 });
