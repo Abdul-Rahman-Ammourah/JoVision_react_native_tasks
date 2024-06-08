@@ -68,11 +68,26 @@ export default styles = StyleSheet.create({
         marginBottom: 15,
         justifyContent: 'center',
         alignItems: 'center',
-        width:100,
+        width:55,
         height: 55,
         borderWidth: 1,
         padding: 10,
         borderRadius: 10,
         borderBlockColor: 'blackShade',
+        textAlign: 'center',
+    },
+    ModalbuttonRemove:{
+        position: 'absolute',
+        bottom: 190,
+        left: 165,
+        
+    },
+    ModalbuttonAdd:{
+        position: 'absolute',
+        bottom: 220,
+        right: 165,
+        
+        
+
     }
 });

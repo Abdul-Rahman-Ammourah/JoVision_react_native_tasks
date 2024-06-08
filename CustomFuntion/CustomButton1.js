@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable,StyleSheet,Text } from "react-native";
 
 
-export default CButton = ({onPress,title,style,styletext}) => {
+export default C1Button = ({onPress = () => {null},title = "Button",style,styletext}) => {
     return(
         <Pressable onPress={onPress} style={[innerstyle.button,style ]} >
             <Text style={[innerstyle.text, styletext]} >{title}</Text>
