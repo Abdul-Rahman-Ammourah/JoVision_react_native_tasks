@@ -52,10 +52,12 @@ export default class Task29 extends Component {
 
             <Pressable onPress={() => this.Deleteimage(index)} style={styles.ModalbuttonRemove}>
                 <FontAwesome5 name="backspace" size={25} color="darkred" />
+                {/* Task30 */}
             </Pressable>
 
             <Pressable onPress={() => this.Addimage(index)} style={styles.ModalbuttonAdd}>
                 <FontAwesome5 name="plus-circle" size={25} color="darkred" />
+                {/* Task31 */}
             </Pressable>
             </View>
         )
