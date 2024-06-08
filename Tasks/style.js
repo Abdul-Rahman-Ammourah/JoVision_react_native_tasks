@@ -84,7 +84,7 @@ export default styles = StyleSheet.create({
     },
     ModalbuttonAdd:{
         position: 'absolute',
-        bottom: 220,
+        bottom: 190,
         right: 165,
         
         
