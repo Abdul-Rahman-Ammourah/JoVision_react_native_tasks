@@ -4,8 +4,8 @@ import { TouchableOpacity, Text, StyleSheet, Pressable } from "react-native";
 export default C2Button = ({ text = "Remove", style, onPress = () => { null },styletext }) => {
   return (
     <TouchableOpacity style={[styles.button, style]} >
-      <TouchableOpacity style={styles.getItWrapper} onPress={onPress} >
-        <Text style={[styles.getIt, styletext]}>{text}</Text>
+      <TouchableOpacity style={styles.textWrapper} onPress={onPress} >
+        <Text style={[styles.text, styletext]}>{text}</Text>
       </TouchableOpacity>
     </TouchableOpacity>
   );
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     display: 'flex',
   },
-  getItWrapper: {
+  textWrapper: {
     alignItems: 'center',
     backgroundColor: '#2b2e4a',
     borderRadius: 999,
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     position: 'relative',
   },
-  getIt: {
+  text: {
     color: '#ffffff',
     fontFamily: 'Lato-Bold',
     fontSize: 14,
