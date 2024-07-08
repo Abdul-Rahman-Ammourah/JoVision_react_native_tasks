@@ -19,6 +19,9 @@ import Task32 from "./Tasks/Task32";
 import Task33 from "./Tasks/Task33";
 import Task34 from "./Tasks/Task34/Task34";
 import Task35 from "./Tasks/Task35";
+import Task36 from "./Tasks/Task36";
+import Task37 from "./Tasks/Task37";
+
 //******************************************************************  */
 export default class App extends Component {
   render(){
@@ -42,7 +45,9 @@ export default class App extends Component {
         {/* <Task32></Task32> */}
         {/* <Task33></Task33> */}
         {/* <Task34></Task34> */}
-        <Task35></Task35>
+        {/* <Task35></Task35> */}
+        {/* <Task36></Task36> */}
+        <Task37></Task37>
         </View>
 
     )
