@@ -29,8 +29,11 @@ export default function Task37() {
 
     const onRefresh = () => {
         setRefreshing(true);
-        // Simulate a network request with a timeout
-        WordGenerator();
+        
+        setTimeout(() => {
+            WordGenerator();
+        }, 1000);
+        
     };
 
     return (
