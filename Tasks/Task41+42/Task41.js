@@ -28,7 +28,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="TabNavigator">
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
-        <Stack.Screen name="Screen2" component={Screen2} />
       </Stack.Navigator>
     </NavigationContainer>
   );
