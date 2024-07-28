@@ -5,7 +5,7 @@ export default class MyClasscomp extends Component{
     render(){
         return(
             <View>
-                <Text>Another class Hey!!</Text>
+                <Text>Class Task19 Says hi!!</Text>
             </View>
         )
     }

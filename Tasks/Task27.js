@@ -4,15 +4,15 @@ import cat1 from "../Resources/Cat1.jpeg";
 import cat2 from "../Resources/Cat2.jpeg";
 import cat3 from "../Resources/Cat3.jpeg";
 
-const catlist = [cat1,cat2,cat3]//creating an array
+const catlist = [cat1,cat2,cat3]
 export default class Task27 extends Component {
     state = {
-        image:catlist[0]//setting the first image as the default
+        image:catlist[0]
     }
     ChangeImage = (usernum) => {
-        this.setState({image:catlist[usernum-1]})//changing the image
+        this.setState({image:catlist[usernum-1]})
     }
-    handleclick = () => {//asking the user for input from 1 to 3 via alert and passing it to ChangeImage
+    handleclick = () => {
         
         Alert.alert("Cat pictures","Choose one of the three cats",
         [{text:"1",onPress:()=>this.ChangeImage(1)},

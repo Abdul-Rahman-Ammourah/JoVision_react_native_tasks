@@ -1,9 +1,7 @@
 import React,{Component} from "react";
-import { View,Text,Button, Image,Alert, Pressable, FlatList,Modal, TextInput } from "react-native";
-import C1Button from "../CustomFuntion/CustomButton1.js";
+import { View,Text,StyleSheet, Image,Alert, Pressable, FlatList,Modal, TextInput } from "react-native";
 import C2Button from "../CustomFuntion/CustomButton2.js";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import styles from "./style.js";
 import cat1 from "../Resources/Cat1.jpeg";
 import cat2 from "../Resources/Cat2.jpeg";
 import cat3 from "../Resources/Cat3.jpeg";
@@ -123,3 +121,59 @@ export default class Task29 extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    list: {
+        flex: 1,
+        flexDirection: 'row',
+    },
+    contentList: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    containerimage: {
+        padding: 1,
+    },
+    image: {
+        width: 200,
+        height: 200,
+        marginBottom: 20,
+    },
+    ModalbuttonAdd: {
+        position: 'absolute',
+        top:0,
+        right: 10
+    },
+    ModalbuttonRemove: {
+        position: 'absolute',
+        top:0,
+        left: 10
+    },
+    OutterModal: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)'
+    },
+    InnerModal: {
+        width: 300,
+        height: 300,
+        backgroundColor: 'white',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10
+    },
+    ModalText: {
+        fontSize: 20
+    },
+    ModalInput: {
+        width: 200,
+        height: 40,
+        borderWidth: 1
+    }
+})

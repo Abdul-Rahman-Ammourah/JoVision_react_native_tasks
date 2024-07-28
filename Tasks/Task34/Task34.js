@@ -1,10 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { View, Text } from "react-native";
 import useCurrentTime from "./useCurrentTime";
 
 export default function task34() {
-    //cleaer interfall when unmounted
-    React.useEffect(() => {
+    useEffect(() => {
         return () => {
             clearInterval();
         };

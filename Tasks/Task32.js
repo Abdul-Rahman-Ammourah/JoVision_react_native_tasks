@@ -1,7 +1,6 @@
 import React,{Component, createRef} from "react";
 import { View,Text,Button,StyleSheet,Alert, Image, ImageBackground, Pressable } from "react-native";
 import Video from "react-native-video";
-import styles from "./style.js";
 import Cat1 from "../Resources/Cat1.jpeg";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
@@ -24,7 +23,7 @@ export default Task32 = () => {
         setStatus({shouldPlay: !status.shouldPlay})
     }
     return(
-        <View style={styles.container}>     
+        <View style={style.container}>     
             <Video
                 ref={videoRef}
                 source={background}
@@ -48,10 +47,7 @@ export default Task32 = () => {
 const style = StyleSheet.create({
     container:{
         position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
+        
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -66,8 +62,9 @@ const style = StyleSheet.create({
     },
     playIcon:{
         position: 'absolute',
-        top: 350,
+        top: 120,
         left: 135,
         zIndex: 10,
         },
+    
 })

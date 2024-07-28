@@ -1,5 +1,5 @@
-import React,{Component,useState} from "react";
-import {View,Text,Button,StyleSheet,Alert} from 'react-native';
+import React,{useState} from "react";
+import {View,Text,Button,StyleSheet} from 'react-native';
  
 const Task16 = () => {
     const [IsHidden,SetIsHidden] = useState(true);

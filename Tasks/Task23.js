@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { View,Text,Button, TextInput } from "react-native";
-import CustomClass3 from "../CustomClass/CustomClass3";
+import CustomClass3 from "../CustomClass/CustomClass3_Task23";
 export default class Task23 extends Component {
     state = {
         text:"Changable text"

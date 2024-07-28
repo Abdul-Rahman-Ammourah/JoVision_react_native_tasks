@@ -1,13 +1,13 @@
-import React,{useEffect} from "react";
-import { View, Text,ScrollView,StyleSheet } from "react-native";
-import { maxWorkers } from "../metro.config";
+import React, { useEffect, useState } from "react";
+import { View, Text, ScrollView, StyleSheet, RefreshControl } from "react-native";
 
-export default function Task36() {
-    const [words,setWords] = React.useState([]);
-    
+export default function Task37() {
+    const [words, setWords] = useState([]);
+
     useEffect(() => {
         WordGenerator();
-    })
+    }, []);
+
     function generateRandomWord(length) {
         let result = '';
         const characters = 'abcdefghijklmnopqrstuvwxyz';
@@ -16,18 +16,21 @@ export default function Task36() {
         }
         return result;
     }
+
     const WordGenerator = () => {
         const generateWords = [];
         for (let i = 0; i < 100; i++) {
             generateWords.push(generateRandomWord(7));
         }
         setWords(generateWords);
-    }
+        setRefreshing(false);
+    };
+
     return (
         <View style={styles.container}>
-            <ScrollView style={styles.scroll}>
+            <ScrollView>
                 {words.map((word, index) => (
-                    <Text key={index}>{word}</Text>
+                    <Text key={index} style={styles.word}>{word}</Text>
                 ))}
             </ScrollView>
         </View>
@@ -35,13 +38,16 @@ export default function Task36() {
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    scroll:{
-        height: 1000,
-
-    }
-})
+    scroll: {
+        width: '100%',
+    },
+    word: {
+        fontSize: 18,
+        padding: 10,
+    },
+});

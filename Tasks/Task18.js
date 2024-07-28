@@ -1,24 +1,23 @@
-import React,{Component,useState,useEffect} from "react";
+import React,{useState,useEffect} from "react";
 import {View,Text,ActivityIndicator, StyleSheet} from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Task18 = () => {
     const [Isloading,SetIsloading] = useState(true);
     
 
     useEffect(() => {
-        const timer = setTimeout(() => {SetIsloading(false);}, 5000);
+        setTimeout(() => {SetIsloading(false);}, 5000);
      
       }, []);
     return(
-    <View>
-        
-        
-        {Isloading && (
+    <View style={Style.container}>
+        {Isloading ? (
             <>
-                <ActivityIndicator size='large' color='#00ffff' />
-                <Text>Loading...</Text>
+                <ActivityIndicator size='large' color='#bbbbff' />
+                <Text style={Style.text}>Loading...</Text>
             </>
+        ):(
+            <Text style={Style.text}>Done Loading...</Text>
         )}
         
     </View>
@@ -30,7 +29,10 @@ const Style = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignContent: 'center',
-
+    },
+    text:{
+        fontSize: 20,
+        color: 'black',
     }
 
 })

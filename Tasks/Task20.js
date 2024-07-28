@@ -1,18 +1,10 @@
 import React,{Component} from "react";
 import { View,Text,Button,StyleSheet, Alert } from "react-native";
-import MyClasscomp from '../CustomClass/CustomClass2';
+import MyClasscomp from '../CustomClass/CustomClass2_Task20';
 
 export default class Task20 extends Component {
     state = {
         Callclass:false,
-        didmount:false
-    }
-    componentDidMount(){
-        this.setState({didmount:true})
-        console.log("Custom Class Loaded......")
-    }
-    componentWillUnmount(){
-        console.log("Custom Class Unloaded.....")
     }
 
     updateState = () => {
@@ -20,7 +12,7 @@ export default class Task20 extends Component {
     
     render(){
         return(
-            <View>
+            <View style={Style.container}>
                 <Button title="Show" onPress={this.updateState} ></Button>
                 {this.state.Callclass && <MyClasscomp></MyClasscomp>}
                 

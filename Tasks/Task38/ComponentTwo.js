@@ -9,6 +9,7 @@ const ComponentTwo = () => {
     return (
         <View style={styles.container}>
             <TextInput
+                placeholder='Write here'
                 style={styles.input}
                 value={sharedText}
                 onChangeText={setSharedText}
@@ -20,10 +21,12 @@ const ComponentTwo = () => {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 20,
+        flex: 1,
+        justifyContent: 'center',
     },
     input: {
         height: 40,
+        width: 150,
         borderColor: 'gray',
         borderWidth: 1,
         marginBottom: 10,

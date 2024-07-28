@@ -13,7 +13,7 @@ export default class Task26 extends Component {
         const responec = await fetch("https://api.ipify.org?format=json")
         const data = await responec.json();
         this.setState({IPaddress:data.ip,Isloading:true})
-        setTimeout(()=>{this.setState({Isloading:false})},3000)
+        setTimeout(()=>{this.setState({Isloading:false})},500)
     }
         catch(error){
             console.error("Error Fetch your IP address",error);
@@ -35,14 +35,11 @@ export default class Task26 extends Component {
             <View>
                 {this.state.Isloading ? <ActivityIndicator size={'large'} color={'red'}></ActivityIndicator> :
                 <View>
-                    <Button title="Get Ip (NON-BLOCKING)" onPress={this.Getip} color={"blue"}></Button>
-                    <Button title="Get Ip (BLOCKING)" onPress={this.BlockingGetip} color="darkblue"></Button>
+                    <Button title="Get Ip (NON-BLOCKING)" onPress={this.Getip} color={"#bbaaaa"}></Button>
+                    <Button title="Get Ip (BLOCKING)" onPress={this.BlockingGetip} color="blue"></Button>
                     <Text>{this.state.IPaddress}</Text>
                 </View> 
                 }
-
-
-
             </View>
         )
 

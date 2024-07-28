@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { View,Text,Button } from "react-native";
-import CustomFunction1 from "../CustomFuntion/CustomFunction1";
+import CustomFunction1 from "../CustomFuntion/CustomFunction1_Task21";
 export default class Task21 extends Component {
     state = {
         Isloading:false

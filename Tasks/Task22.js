@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { View,Text,Button } from "react-native";
-import CustomFunction2 from "../CustomFuntion/CustomFunction2";
+import CustomFunction2 from "../CustomFuntion/CustomFunction2_Task22";
 export default class Task22 extends Component {
     state = {
         text:"Some Changable Text"

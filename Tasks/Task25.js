@@ -1,6 +1,6 @@
 import React,{Component, createRef, useRef} from "react";
 import { View,Text,TextInput, StyleSheet } from "react-native";
-import CustomClass4 from "../CustomClass/CustomClass4";
+import CustomClass4 from "../CustomClass/CustomClass4_Task25";
 export default class Task25 extends Component {
     state = {
         text:''

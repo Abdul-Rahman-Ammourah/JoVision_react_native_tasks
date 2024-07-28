@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { View,Text,Button,StyleSheet, Alert } from "react-native";
-import MyClasscomp from '../CustomClass/CustomClass1';
+import MyClasscomp from '../CustomClass/CustomClass1_Task19';
 
 export default class Task19 extends Component {
     state = {

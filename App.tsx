@@ -1,7 +1,5 @@
-import React,{Component,useState} from "react";
-import {View,Text,Button,StyleSheet,Alert} from 'react-native';
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React,{Component} from "react";
+import {View,StyleSheet} from 'react-native';
 //Tasks
 import Task16 from "./Tasks/Task16";
 import Task17 from "./Tasks/Task17";

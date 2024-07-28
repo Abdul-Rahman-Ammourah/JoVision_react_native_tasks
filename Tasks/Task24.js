@@ -1,6 +1,6 @@
 import React,{Component, createRef, useRef} from "react";
 import { View,Text,TextInput, StyleSheet } from "react-native";
-import Customfunction3 from "../CustomFuntion/CustomFunction3";
+import Customfunction3 from "../CustomFuntion/CustomFunction3_Task24";
 export default class Task24 extends Component {
 
     state = {
